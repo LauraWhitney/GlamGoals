@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Glam_backend": {
+      "build": "npx azle Glam_backend",
+      "candid": "src/Glam_backend/Glam_backend.did",
+      "gzip": true,
+      "main": "src/Glam_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "javascript": {},
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/Glam_backend/Glam_backend.wasm"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
