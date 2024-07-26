@@ -1,29 +1,23 @@
 {
   "canisters": {
-    "Glam_backend": {
-      "build": "npx azle Glam_backend",
-      "candid": "src/Glam_backend/Glam_backend.did",
-      "gzip": true,
-      "main": "src/Glam_backend/src/index.ts",
-      "tech_stack": {
-        "cdk": {
-          "azle": {}
-        },
-        "language": {
-          "javascript": {},
-          "typescript": {}
-        }
-      },
+    "message_board": {
       "type": "custom",
-      "wasm": ".azle/Glam_backend/Glam_backend.wasm"
+      "main": "src/index.ts",
+      "candid": "src/index.did",
+      "candid_gen": "http",
+      "build": "npx azle message_board",
+      "wasm": ".azle/message_board/message_board.wasm",
+      "gzip": true,
+      "metadata": [
+        {
+            "name": "candid:service",
+            "path": "src/index.did"
+        },
+        {
+            "name": "cdk:name",
+            "content": "azle"
+        }
+    ]
     }
-  },
-  "defaults": {
-    "build": {
-      "args": "",
-      "packtool": ""
-    }
-  },
-  "output_env_file": ".env",
-  "version": 1
+  }
 }
